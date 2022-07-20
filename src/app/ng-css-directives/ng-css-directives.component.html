@@ -1,0 +1,14 @@
+<div [ngClass]="{ bordered: true }">This is always bordered</div>
+
+<!-- here we can specify object var since NgClass can treat objects -->
+<div [ngClass]="classObj">
+	Using object var. Border {{ classObj.bordered ? 'ON' : 'OFF' }}
+</div>
+
+<!-- here we can set classList same as class="base blue round" -->
+<div
+	class="base"
+	[ngClass]="classList">
+	This is {{ classList.indexOf('blue') > -1 ? '' : 'NOT' }} blue and
+	{{ classList.indexOf('round') > -1 ? '' : 'NOT' }} rounded corners
+</div>

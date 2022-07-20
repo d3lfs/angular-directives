@@ -1,0 +1,30 @@
+<!-- ngSwitch case using template variable as parameter -->
+<div
+	*ngIf="'A' as variable"
+	[ngSwitch]="variable">
+	<div *ngSwitchCase="'V'">Display V</div>
+	<div *ngSwitchCase="'A'">Display A</div>
+	<div *ngSwitchDefault>Display Default</div>
+</div>
+
+<!-- ngSwitch case using the component property stringVar: string -->
+<div [ngSwitch]="stringVar">
+	<div *ngSwitchCase="'doe'">Display doe</div>
+	<div *ngSwitchCase="'sly'">Display sly</div>
+	<div *ngSwitchDefault>Display Default</div>
+</div>
+
+<!-- ngSwitch case using the component property numVar: number -->
+<div [ngSwitch]="numVar">
+	<div *ngSwitchCase="45">Display 45</div>
+	<div *ngSwitchCase="40">Display 40</div>
+	<div *ngSwitchDefault>Display Default</div>
+</div>
+
+<!-- ngSwitch case in dynamic action -->
+<ul [ngSwitch]="choice">
+	<li *ngSwitchCase="1">First choice</li>
+	<li *ngSwitchCase="2">Second choice</li>
+	<li *ngSwitchCase="3">Third choice</li>
+</ul>
+<button (click)="nextChoice()">Next choice</button>

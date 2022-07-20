@@ -1,0 +1,35 @@
+<!-- NgStyle to set the background-color CSS property -->
+<div [style.background-color]="'yellow'">background-color</div>
+
+<!-- NgStyle with CSS attribute key pairs -->
+<div [ngStyle]="{ color: 'yellow', 'background-color': 'red' }">
+	CSS Attributes
+</div>
+
+<label for="color">color (any): </label>
+<input
+	type="text"
+	id="color"
+	name="color"
+	value="{{ color }}"
+	#colorInput />
+<label for="fontSize">font size (em): </label>
+<input
+	type="text"
+	id="fontSize"
+	name="fontSize"
+	value="{{ fontSize }}"
+	#fontSizeInput />
+<!-- Now here we use the $any() since the fontsizeinput is a type of string -->
+<!-- and our apply() parameter was string and number-->
+<button (click)="apply(colorInput.value, $any(fontSizeInput.value))">
+	Apply CSS style
+</button>
+
+<!-- we can write [ngStyle]="{ color: this.color, 'font-size': this.fontSize + 'em' } -->
+<!-- but in this case we want to specify the fontsize alone with unit using [style.font-size.px] -->
+<div
+	[ngStyle]="{ color: this.color }"
+	[style.font-size.em]="fontSize">
+	Color {{ color }} with font size of {{ fontSize }}em
+</div>

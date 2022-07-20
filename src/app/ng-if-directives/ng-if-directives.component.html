@@ -1,0 +1,11 @@
+<!-- ngIf as for creating variables inside templates -->
+<!-- ngVar is not working so use ngIf instead -->
+<div *ngIf="45 as variableNum">
+	<span> {{ variableNum }} </span>
+</div>
+
+<!-- ngIf as condition -->
+<!-- this dom will show since it's true-->
+<div *ngIf="20 > 19">20 > 19 is true</div>
+<!-- this dom will not shown since it's false -->
+<div *ngIf="stringVar !== 'C'">Display {{ stringVar }}</div>

@@ -1,0 +1,19 @@
+.bordered {
+	border: 1px dashed black;
+	background-color: #eee;
+	width: fit-content;
+}
+
+.base {
+	width: fit-content;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.round {
+	border-radius: 50px;
+}
