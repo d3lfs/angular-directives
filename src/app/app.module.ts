@@ -6,6 +6,7 @@ import { NgStyleDirectivesComponent } from './ng-style-directives/ng-style-direc
 import { NgIfDirectivesComponent } from './ng-if-directives/ng-if-directives.component'
 import { NgSwitchcaseDirectivesComponent } from './ng-switchcase-directives/ng-switchcase-directives.component'
 import { NgCssDirectivesComponent } from './ng-css-directives/ng-css-directives.component'
+import { NgNonbindableDirectivesComponent } from './ng-nonbindable-directives/ng-nonbindable-directives.component'
 
 @NgModule({
 	declarations: [
@@ -14,6 +15,7 @@ import { NgCssDirectivesComponent } from './ng-css-directives/ng-css-directives.
 		NgIfDirectivesComponent,
 		NgSwitchcaseDirectivesComponent,
 		NgCssDirectivesComponent,
+		NgNonbindableDirectivesComponent,
 	],
 	imports: [BrowserModule],
 	providers: [],
